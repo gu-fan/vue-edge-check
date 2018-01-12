@@ -13,7 +13,7 @@
 
 ![Good Effect](https://user-images.githubusercontent.com/579129/34886822-58fa617e-f7ff-11e7-98a6-f287992ea749.gif)
 
-## 来由
+## 为啥
 
 iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页面。
 在滑动完毕后，页面才会触发`history.back()/history.forward()`。
@@ -35,7 +35,7 @@ iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页
 引入后，有两个属性 `$isEdgeLeft` 和 `$isEdgeRight`，
 代表页面左侧以及页面右侧。
 
-可以用来定义在组件中定义需要的class
+可以用在组件中定义需要的class
 
 引入组件
 ````javascript
@@ -43,7 +43,7 @@ import EdgeCheck from 'vue-edge-check'
 Vue.use(EdgeCheck)
 ````
 
-定义class名称
+定义class
 ````vue
 <template>
   <transition name="slide">
