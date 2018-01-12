@@ -7,7 +7,7 @@ var plugin = {
   touch: {x: -1, y: -1},
   options: {
     EDGE_WIDTH: 48,
-    TRANSITION_TIME: 500
+    EDGE_DURATION: 500
   },
   actions: {
     touchstart: function touchstart (e) {
@@ -15,7 +15,7 @@ var plugin = {
       if (e.touches.length != 1) { return }
 
       var EDGE_WIDTH = plugin.options.EDGE_WIDTH;
-      var TRANSITION_TIME = plugin.options.TRANSITION_TIME;
+      var EDGE_DURATION = plugin.options.EDGE_DURATION;
 
       plugin.screen.x = window.screen.width;
       plugin.screen.y = window.screen.height;
@@ -37,7 +37,7 @@ var plugin = {
         if (plugin.timerR) { clearTimeout(plugin.timerR); }
         plugin.timerR = setTimeout(function () {
           plugin.vm.isRight = false;
-        }, 800 + TRANSITION_TIME);
+        }, 800 + EDGE_DURATION);
 
       } else {
 
@@ -54,7 +54,7 @@ var plugin = {
       if (plugin.timerL) { clearTimeout(plugin.timerL); }
       plugin.timerL = setTimeout(function () {
         plugin.vm.isLeft = false;
-      }, plugin.options.TRANSITION_TIME);
+      }, plugin.options.EDGE_DURATION);
     }
   },
   bindEvents: function bindEvents () {
@@ -102,7 +102,7 @@ var plugin = {
 
     if (options) {
       if (options.edge_width) { plugin.options.EDGE_WIDTH = options.edge_width; }
-      if (options.transition_time) { plugin.options.TRANSITION_TIME = options.transition_time; }
+      if (options.edge_duration) { plugin.options.EDGE_DURATION = options.edge_duration; }
     }
 
     plugin.Vue = Vue;
