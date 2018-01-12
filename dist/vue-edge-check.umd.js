@@ -36,12 +36,12 @@ var plugin = {
       if (plugin.screen.x - plugin.touch.x < EDGE_WIDTH) {
         plugin.vm.isRight = true;
 
-        // Reset Right in 1500 ms,
+        // Reset Right in 800 + 500 ms,
         // as there is no touchend event on forwarding page.
         if (plugin.timerR) { clearTimeout(plugin.timerR); }
         plugin.timerR = setTimeout(function () {
           plugin.vm.isRight = false;
-        }, 1000 + TRANSITION_TIME);
+        }, 800 + TRANSITION_TIME);
 
       } else {
 
@@ -50,6 +50,10 @@ var plugin = {
       }
     },
     touchend: function touchend (e) {
+
+      // no need to reset
+      if (!plugin.vm.isLeft) { return }
+      
       // Reset Left after touchend + 500ms
       if (plugin.timerL) { clearTimeout(plugin.timerL); }
       plugin.timerL = setTimeout(function () {
