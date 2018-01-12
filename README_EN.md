@@ -1,6 +1,6 @@
 # vue-edge-check
 
-[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check) 
+[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check#vue-edge-check) 
 
 Check Browser Edge Reactively.To prevent transition effect triggered oddly when swipe edge with `vue-router`:sparkles:
 
@@ -104,13 +104,13 @@ define / block transition effect
 
 the width of edge check
 
-**transition_time**: default: 500
+**edge_duration**: default: 500
 
 the `$isEdgeLeft/$isEdgeRight` property lasting time, need a bit more than transition effect time
 
 ````javascript
 
 // in case if you have a longer transition effect
-Vue.use(EdgeCheck, {transition_time:1000})
+Vue.use(EdgeCheck, {edge_duration:1000})
 
 ````

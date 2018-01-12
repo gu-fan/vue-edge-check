@@ -1,6 +1,6 @@
 # vue-edge-check
 
-[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check) 
+[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check#vue-edge-check) 
 
 检查浏览器的边缘是否被触碰。
 防止边缘滑动时，`vue-router`中transition的效果重复触发:sparkles:
@@ -101,13 +101,13 @@ Vue.use(EdgeCheck)
 
 边缘检测的宽度
 
-**transition_time**: 默认值: 500
+**edge_duration**: 默认值: 500
 
 页面边缘属性 `$isEdgeLeft/$isEdgeRight`的持续时间,需要略大于效果的时间
 
 ````javascript
 
 // in case if you have a longer transition effect
-Vue.use(EdgeCheck, {transition_time:1000})
+Vue.use(EdgeCheck, {edge_duration:1000})
 
 ````
