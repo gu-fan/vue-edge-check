@@ -5,10 +5,13 @@ English / 中文
 检查浏览器的边缘是否被触碰。
 防止`vue-router`中transition的效果重复触发:sparkles:
 
-`Before`
-![Odd Effect](https://user-images.githubusercontent.com/579129/34884998-79c29d5a-f7f9-11e7-9e86-a146ad1c54e0.gif)
-`After`
-![Good Effect](https://user-images.githubusercontent.com/579129/34885507-2f6cbd24-f7fb-11e7-93e4-6739f6afa1f9.gif)
+**Before**
+
+![Odd Effect](https://user-images.githubusercontent.com/579129/34886679-be522206-f7fe-11e7-8ba9-79c7b486a4cc.gif)
+
+**After**
+
+![Good Effect](https://user-images.githubusercontent.com/579129/34886822-58fa617e-f7ff-11e7-98a6-f287992ea749.gif)
 
 ## 原理
 
@@ -19,24 +22,26 @@ iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页
 ## 安装
 
 `npm install vue-edge-check`
+
 OR 
+
 `yarn add vue-edge-check`
 
 
 ## 使用
 
+引入后，有两个属性 `$isEdgeLeft` 和 `$isEdgeRight`，
+代表页面左侧以及页面右侧。
 
-在页面中，会存在两个属性 `$isEdgeLeft` 和 `$isEdgeRight`，
-代表在左侧以及在右侧。
-可以用来定义
+可以用来定义需要的class或者组件
 
-main.js
+main.js 引入组件
 ````javascript
 import EdgeCheck from '@/plugin/vue-edge-check'
 Vue.use(EdgeCheck)
 ````
 
-Trans.vue template
+Trans.vue 定义class名称
 ````vue
 <template>
   <transition name="slide">
@@ -50,34 +55,36 @@ Trans.vue template
 ````
 
 
-Trans.vue style
+Trans.vue 定义css效果
 ````css
 
+// ORIGIN: set slide transition effect time
 .slide-enter-active, .slide-leave-active {
   transition: all 0.3s;
 }
 
+// ORIGIN: add slide transition effect
 .slide-enter,
 .slide-leave-to
 {
   transform: translate3d(100%, 0, 0);
 }
 
-// this component should have no transition with edge forward/back
+// EXTRA: this component should have no transition with edge forward/back
 .is-edge-forward.slide-enter-active,
 .is-edge-back.slide-leave-active
 {
   transition: all 0s;
 }
 
-// this component should not display at slide-leave start
+// EXTRA: this component should not display at slide-leave start
 // or else it will blink
 .is-edge-back.slide-leave,
 {
   transform: translate3d(100%, 0, 0);
 }
 
-// this component should display and not move at slide-enter start
+// EXTRA: this component should display and not move at slide-enter start
 // or else it will jump
 .is-edge-forward.slide-enter,
 {
@@ -85,8 +92,5 @@ Trans.vue style
 }
 
 ````
-
-
-
 
 
