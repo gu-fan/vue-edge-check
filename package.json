@@ -1,6 +1,6 @@
 {
   "name": "vue-edge-check",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check Browser Edge Reactively",
   "main": "dist/vue-edge-check.common.js",
   "module": "dist/vue-edge-check.es.js",
