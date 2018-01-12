@@ -1,6 +1,6 @@
 # vue-edge-check
 
-[English!](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文!](https://github.com/gu-fan/vue-edge-check) 
+[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check) 
 
 Check Browser Edge Reactively.To prevent transition effect triggered oddly when swipe edge with `vue-router`:sparkles:
 

@@ -1,6 +1,6 @@
 # vue-edge-check
 
-[English!](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文!](https://github.com/gu-fan/vue-edge-check) 
+[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check) 
 
 检查浏览器的边缘是否被触碰。
 防止边缘滑动时，`vue-router`中transition的效果重复触发:sparkles:
