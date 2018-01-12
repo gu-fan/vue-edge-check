@@ -17,7 +17,9 @@ English / 中文
 
 iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页面。
 在滑动完毕后，页面才会触发`history.back()/history.forward()`。
-然后router的transition动画还会再次触发，效果就多余了:sparkles:
+然后router的transition动画还会再次触发，效果就多余了。
+
+因此我们可以检测是否在边缘的时候返回/前进，从而忽略本次效果:sparkles:
 
 ## 安装
 
@@ -90,6 +92,23 @@ Trans.vue 定义css效果
 {
   transform: translate3d(0, 0, 0);
 }
+
+````
+
+## 选项
+
+**edge_width**: 默认值: 48
+
+边缘检测的宽度
+
+**transition_time**: 默认值: 500
+
+页面效果的时间
+
+````javascript
+
+// in case if you have a longer transition effect
+Vue.use(EdgeCheck, {transition_time:1000})
 
 ````
 
