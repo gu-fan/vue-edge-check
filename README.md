@@ -35,7 +35,7 @@ iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页
 引入后，有两个属性 `$isEdgeLeft` 和 `$isEdgeRight`，
 代表页面左侧以及页面右侧。
 
-可以用来定义需要的class或者组件
+可以用来定义在组件中定义需要的class
 
 引入组件
 ````javascript

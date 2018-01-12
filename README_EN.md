@@ -38,7 +38,7 @@ OR
 Two Propery `$isEdgeLeft` 和 `$isEdgeRight`，
 Means left edge and right edge of page
 
-can be used to define class or components
+can be used to define class in components
 
 import and use
 ````javascript
