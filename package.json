@@ -1,0 +1,34 @@
+{
+  "name": "vue-edge-check",
+  "version": "1.0.0",
+  "description": "Check Browser Edge Reactively",
+  "main": "dist/vue-edge-check.common.js",
+  "module": "dist/vue-edge-check.es.js",
+  "jsnext:main": "dist/vue-edge-check.es.js",
+  "scripts": {
+    "build": "rollup --config build/rollup.config.js",
+    "minify": "rollup --config build/rollup.config.js --environment minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gu-fan/vue-edge-check.git"
+  },
+  "keywords": [
+    "vue",
+    "edge",
+    "ios"
+  ],
+  "author": "gu.fan@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gu-fan/vue-edge-check/issues"
+  },
+  "homepage": "https://github.com/gu-fan/vue-edge-check#readme",
+  "devDependencies": {
+    "rollup": "^0.54.0",
+    "rollup-plugin-buble": "^0.18.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}

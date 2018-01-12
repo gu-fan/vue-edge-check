@@ -3,7 +3,7 @@
 English / 中文
 
 检查浏览器的边缘是否被触碰。
-防止`vue-router`中transition的效果重复触发:sparkles:
+防止边缘滑动时，`vue-router`中transition的效果重复触发:sparkles:
 
 **Before**
 
@@ -19,7 +19,7 @@ iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页
 在滑动完毕后，页面才会触发`history.back()/history.forward()`。
 然后router的transition动画还会再次触发，效果就多余了。
 
-因此我们可以检测是否在边缘的时候返回/前进，从而忽略本次效果:sparkles:
+因此我们可以检测返回/前进的时候是否触碰到边缘，从而忽略本次效果:sparkles:
 
 ## 安装
 
@@ -37,13 +37,13 @@ OR
 
 可以用来定义需要的class或者组件
 
-main.js 引入组件
+引入组件
 ````javascript
-import EdgeCheck from '@/plugin/vue-edge-check'
+import EdgeCheck from 'vue-edge-check'
 Vue.use(EdgeCheck)
 ````
 
-Trans.vue 定义class名称
+定义class名称
 ````vue
 <template>
   <transition name="slide">
@@ -57,7 +57,7 @@ Trans.vue 定义class名称
 ````
 
 
-Trans.vue 定义css效果
+定义/屏蔽transition效果
 ````css
 
 // ORIGIN: set slide transition effect time
@@ -103,7 +103,7 @@ Trans.vue 定义css效果
 
 **transition_time**: 默认值: 500
 
-页面效果的时间
+页面边缘属性的持续时间,需要略大于效果的时间
 
 ````javascript
 
@@ -111,5 +111,3 @@ Trans.vue 定义css效果
 Vue.use(EdgeCheck, {transition_time:1000})
 
 ````
-
-
