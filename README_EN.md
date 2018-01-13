@@ -24,6 +24,7 @@ that's redundant.
 So we can check if we touch the edge when move back/forward, then
 block current transition effect :sparkles:
 
+![Page](https://user-images.githubusercontent.com/579129/34906362-108e5794-f8a7-11e7-897f-a80d5398323c.png)
 
 ## Install
 

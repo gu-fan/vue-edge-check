@@ -21,6 +21,8 @@ iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页
 
 因此我们可以检测返回/前进的时候是否触碰到边缘，从而忽略本次效果:sparkles:
 
+![Page](https://user-images.githubusercontent.com/579129/34906362-108e5794-f8a7-11e7-897f-a80d5398323c.png)
+
 ## 安装
 
 `npm install vue-edge-check`
