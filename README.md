@@ -1,6 +1,6 @@
 # vue-edge-check
 
-[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check#vue-edge-check) 
+[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md#vue-edge-check) / [中文](https://github.com/gu-fan/vue-edge-check#vue-edge-check) 
 
 检查浏览器的边缘是否被触碰。
 防止边缘滑动时，`vue-router`中transition的效果重复触发:sparkles:
@@ -33,7 +33,7 @@ iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页
 ## 使用
 
 引入后，有两个属性 `$isEdgeLeft` 和 `$isEdgeRight`，
-代表页面左侧以及页面右侧。
+代表触碰到页面左侧以及页面右侧。
 
 可以用在组件中定义需要的class
 
@@ -103,7 +103,7 @@ Vue.use(EdgeCheck)
 
 **edge_duration**: 默认值: 500
 
-页面边缘属性 `$isEdgeLeft/$isEdgeRight`的持续时间,需要略大于效果的时间
+属性 `$isEdgeLeft/$isEdgeRight`的持续时间,需要略大于效果的时间
 
 ````javascript
 

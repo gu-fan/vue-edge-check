@@ -1,6 +1,6 @@
 # vue-edge-check
 
-[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md) / [中文](https://github.com/gu-fan/vue-edge-check#vue-edge-check) 
+[English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md#vue-edge-check) / [中文](https://github.com/gu-fan/vue-edge-check#vue-edge-check) 
 
 Check Browser Edge Reactively.To prevent transition effect triggered oddly when swipe edge with `vue-router`:sparkles:
 
@@ -36,7 +36,7 @@ OR
 ## Useage
 
 Two Propery `$isEdgeLeft` 和 `$isEdgeRight`，
-Means left edge and right edge of page
+Means touching left edge or right edge of page
 
 can be used to define class in components
 
