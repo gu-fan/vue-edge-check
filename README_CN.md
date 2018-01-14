@@ -2,7 +2,8 @@
 
 [English](https://github.com/gu-fan/vue-edge-check/blob/master/README_EN.md#vue-edge-check) / [中文](https://github.com/gu-fan/vue-edge-check/blob/master/README_CN.md#vue-edge-check) 
 
-Check Browser Edge Reactively.To prevent transition effect triggered oddly when swipe edge with `vue-router`:sparkles:
+检查浏览器的边缘是否被触碰。
+防止边缘滑动时，`vue-router`中transition的效果重复触发:sparkles:
 
 **Before**
 
@@ -12,42 +13,39 @@ Check Browser Edge Reactively.To prevent transition effect triggered oddly when 
 
 ![Good Effect](https://user-images.githubusercontent.com/579129/34886822-58fa617e-f7ff-11e7-98a6-f287992ea749.gif)
 
+## 为啥
 
-## Why & How ?
+iOS的Safari/WKWebview/微信中，可以边缘滑动到上一个和下一个页面。
+在滑动完毕后，页面才会触发`history.back()/history.forward()`。
+然后router的transition动画还会再次触发，效果就多余了。
 
-You can swipe with edge gesture in iOS Safari/WKWebview/Wechat.
-The page will trigger `history.back()/history.forward()` after the 
-page is sliding finished.
-then the transition animation of router will still triggering,
-that's redundant.
-
-So we can check if we touch the edge when move back/forward, then
-block current transition effect :sparkles:
+因此我们可以检测返回/前进的时候是否触碰到边缘，从而忽略本次效果:sparkles:
 
 ![Page](https://user-images.githubusercontent.com/579129/34906362-108e5794-f8a7-11e7-897f-a80d5398323c.png)
 
-## Install
+## 安装
 
 `npm install vue-edge-check`
 
-OR
+或
 
 `yarn add vue-edge-check`
 
-## Useage
 
-Two Propery `$isEdgeLeft` 和 `$isEdgeRight`，
-Means touching left edge or right edge of page
+## 使用
 
-can be used to define class in components
+引入后，有两个属性 `$isEdgeLeft` 和 `$isEdgeRight`，
+代表触碰到页面左侧以及页面右侧。
 
-import and use
+可以用在组件中定义需要的class
+
+引入组件
 ````javascript
 import EdgeCheck from 'vue-edge-check'
 Vue.use(EdgeCheck)
 ````
 
-define class
+定义class
 ````vue
 <template>
   <transition name="slide">
@@ -61,7 +59,7 @@ define class
 ````
 
 
-define / block transition effect
+定义/屏蔽transition效果
 ````css
 
 // ORIGIN: set slide transition effect time
@@ -99,15 +97,15 @@ define / block transition effect
 
 ````
 
-## Options
+## 选项
 
-**edge_width**: default: 48
+**edge_width**: 默认值: 48
 
-the width of edge check
+边缘检测的宽度
 
-**edge_duration**: default: 500
+**edge_duration**: 默认值: 500
 
-the `$isEdgeLeft/$isEdgeRight` property lasting time, need a bit more than transition effect time
+属性 `$isEdgeLeft/$isEdgeRight`的持续时间,需要略大于效果的时间
 
 ````javascript
 
