@@ -34,7 +34,7 @@ OR
 
 `yarn add vue-edge-check`
 
-## Useage
+## Usage
 
 Two Propery `$isEdgeLeft` 和 `$isEdgeRight`，
 Means touching left edge or right edge of page
